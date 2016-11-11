@@ -1,0 +1,49 @@
+﻿<common1:PageBase
+    x:Class="DrinkOBand.Views.InfoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DrinkOBand.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:common="using:DrinkOBand.Common"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    xmlns:common1="using:DrinkOBand.Universal.Common"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mvvm:ViewModelLocator.AutoWireViewModel="True">
+
+    <Grid>
+        <StackPanel Margin="20,10,20,10">
+            <TextBlock Text="Info" Style="{StaticResource SubheaderTextBlockStyle}"/>
+            <TextBlock Text="Drink O'Band" Style="{StaticResource SubheaderTextBlockStyle}"/>
+            <TextBlock Style="{StaticResource BaseTextBlockStyle}">
+                <Run>Version </Run>
+                <Run Text="{Binding VersionNumber}"></Run>
+            </TextBlock>
+            <TextBlock Text="(C)2016 by Daniel Kreuzhofer" Style="{StaticResource BaseTextBlockStyle}"/>
+            <TextBlock Style="{StaticResource BaseTextBlockStyle}" Margin="0,20,0,0">
+                <Run Text="Author: Daniel Kreuzhofer"/>
+                <LineBreak/>
+                <LineBreak/>
+                <Run Text="Blog"/>
+                <LineBreak/>
+                <Hyperlink NavigateUri="http://www.kreuzhofer.de/">http://www.kreuzhofer.de/</Hyperlink>
+                <LineBreak/>
+                <LineBreak/>
+                <Run Text="Twitter"/>
+                <LineBreak/>
+                <Hyperlink NavigateUri="https://twitter.com/dkreuzh">@dkreuzh</Hyperlink>
+                <LineBreak/>
+                <LineBreak/>
+                <Run Text="Sourcecode on Github"/>
+                <LineBreak/>
+                <Hyperlink NavigateUri="https://github.com/kreuzhofer/DrinkOBand">https://github.com/kreuzhofer/DrinkOBand/</Hyperlink>
+                <LineBreak/>
+                <LineBreak/>
+                <Run>I created this app initially to track my personal water consumption as it was too low. After a while, it became obvious that other people liked it and I decided to make it public. If you have any suggestions, ideas and bug reports, please do not hesitate to contact me.</Run>
+            </TextBlock>
+                
+        </StackPanel>
+    </Grid>
+</common1:PageBase>
+

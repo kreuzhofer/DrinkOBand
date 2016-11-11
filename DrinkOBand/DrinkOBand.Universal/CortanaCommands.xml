@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="de" Name="CortanaCommands_de">
+    <CommandPrefix> Trinke </CommandPrefix>
+    <Example> Trinke ein Glas Wasser </Example>
+
+    <Command Name="drinkAGlass">
+      <Example> Trinke ein Glas Wasser </Example>
+      <ListenFor> {amount} {subject} {beverage}</ListenFor>
+      <Feedback>Das speichere ich jetzt</Feedback>
+      <VoiceCommandService Target="CortanaAppService"/>
+    </Command>
+    
+    <Command Name="drinkAmount">
+      <Example> Trinke Wasser 300 </Example>
+      <ListenFor> {beverage} {amount} [Milliliter]</ListenFor>
+      <Feedback>Das speichere ich jetzt</Feedback>
+      <VoiceCommandService Target="CortanaAppService"/>
+    </Command>
+
+    <PhraseList Label="subject">
+      <Item>Tasse</Item>
+      <Item>kleines Glas</Item>
+      <Item>Glas</Item>
+      <Item>Gläser</Item>
+      <Item>kleine Flasche</Item>
+      <Item>große Flasche</Item>
+      <Item>Milliliter</Item>
+      <Item>Liter</Item>
+    </PhraseList>
+    
+   <PhraseList Label="beverage">
+      <Item>Wasser</Item>
+      <Item>Kaffe</Item>
+      <Item>Tee</Item>
+      <Item>Milch</Item>
+      <Item>Bier</Item>
+      <Item>Wein</Item>
+    </PhraseList>
+
+    <PhraseTopic Label="amount" Scenario="Short Message" >
+    </PhraseTopic>
+  </CommandSet>
+
+  <CommandSet xml:lang="en" Name="CortanaCommands_en">
+    <CommandPrefix> Drink </CommandPrefix>
+    <Example> Drink a glass of water </Example>
+
+    <Command Name="drinkAGlass">
+      <Example> Drink a glass of water </Example>
+      <ListenFor> {amount} {subject} [of] {beverage}</ListenFor>
+      <Feedback>I am saving this</Feedback>
+      <VoiceCommandService Target="CortanaAppService"/>
+    </Command>
+
+    <Command Name="drinkAmount">
+      <Example> Drink Water 300 </Example>
+      <ListenFor> {beverage} {amount} [Milliliter]</ListenFor>
+      <Feedback>I am saving this</Feedback>
+      <VoiceCommandService Target="CortanaAppService"/>
+    </Command>
+
+    <PhraseList Label="subject">
+      <Item>Tasse</Item>
+      <Item>kleines Glas</Item>
+      <Item>Glas</Item>
+      <Item>Gläser</Item>
+      <Item>kleine Flasche</Item>
+      <Item>große Flasche</Item>
+      <Item>Milliliter</Item>
+      <Item>Liter</Item>
+    </PhraseList>
+
+    <PhraseList Label="beverage">
+      <Item>Wasser</Item>
+      <Item>Kaffe</Item>
+      <Item>Tee</Item>
+      <Item>Milch</Item>
+      <Item>Bier</Item>
+      <Item>Wein</Item>
+    </PhraseList>
+
+    <PhraseTopic Label="amount" Scenario="Short Message" >
+    </PhraseTopic>
+  </CommandSet>
+
+<!-- Other CommandSets for other languages -->
+
+</VoiceCommands>

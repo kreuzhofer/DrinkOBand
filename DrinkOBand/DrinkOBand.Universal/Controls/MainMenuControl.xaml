@@ -1,0 +1,94 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DrinkOBand.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="using:DrinkOBand.Common.Converters"
+    x:Class="DrinkOBand.Controls.MainMenuControl"
+    mc:Ignorable="d"
+    d:DesignHeight="800"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="Black">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Top">
+            <Button HorizontalAlignment="Stretch" Command="{Binding HomeCommand}">
+                <Button.Resources>
+                    <ControlTemplate x:Key="ButtonControlTemplate1" TargetType="Button">
+                        <StackPanel Orientation="Horizontal" Background="Black">
+                            <Image Source="../Assets/House-12.png"></Image>
+                            <TextBlock x:Uid="btnHome" Text="Home - Daily progress" VerticalAlignment="Center" Style="{StaticResource BaseTextBlockStyle}" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Button.Resources>
+                <Button.Template>
+                    <StaticResource ResourceKey="ButtonControlTemplate1"/>
+                </Button.Template>
+            </Button>
+            <Button HorizontalAlignment="Stretch" Command="{Binding HistoryCommand}">
+                <Button.Resources>
+                    <ControlTemplate x:Key="ButtonControlTemplate1" TargetType="Button">
+                        <StackPanel Orientation="Horizontal" Background="Black">
+                            <Image Source="../Assets/Graph.png"></Image>
+                            <TextBlock x:Uid="btnHistory" Text="History" VerticalAlignment="Center" Style="{StaticResource BaseTextBlockStyle}" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Button.Resources>
+                <Button.Template>
+                    <StaticResource ResourceKey="ButtonControlTemplate1"/>
+                </Button.Template>
+            </Button>
+            <Button HorizontalAlignment="Stretch" Command="{Binding ExportCommand}">
+                <Button.Resources>
+                    <ControlTemplate x:Key="ButtonControlTemplate1" TargetType="Button">
+                        <StackPanel Orientation="Horizontal" Background="Black">
+                            <Image Source="../Assets/Data-Export.png"></Image>
+                            <TextBlock x:Uid="btnDataExport" Text="Data export" VerticalAlignment="Center" Style="{StaticResource BaseTextBlockStyle}" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Button.Resources>
+                <Button.Template>
+                    <StaticResource ResourceKey="ButtonControlTemplate1"/>
+                </Button.Template>
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+            <Border BorderThickness="1" BorderBrush="Gray" Height="1"/>
+            <Button HorizontalAlignment="Stretch" Command="{Binding SettingsCommand}">
+                <Button.Resources>
+                    <ControlTemplate x:Key="ButtonControlTemplate1" TargetType="Button">
+                        <StackPanel Orientation="Horizontal" Background="Black">
+                            <Image Source="../Assets/Settings - 11.png"></Image>
+                            <TextBlock x:Uid="btnSettings" Text="Settings" VerticalAlignment="Center" Style="{StaticResource BaseTextBlockStyle}" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Button.Resources>
+                <Button.Template>
+                    <StaticResource ResourceKey="ButtonControlTemplate1"/>
+                </Button.Template>
+            </Button>
+
+            <Button HorizontalAlignment="Stretch" Command="{Binding InfoCommand}">
+                <Button.Resources>
+                    <ControlTemplate x:Key="ButtonControlTemplate1" TargetType="Button">
+                        <StackPanel Orientation="Horizontal" Background="Black">
+                            <Image Source="../Assets/Circle Info - 02.png"></Image>
+                            <TextBlock x:Uid="btnInfo" Text="Info" VerticalAlignment="Center" Style="{StaticResource BaseTextBlockStyle}" Margin="10,0,0,0"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Button.Resources>
+                <Button.Template>
+                    <StaticResource ResourceKey="ButtonControlTemplate1"/>
+                </Button.Template>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

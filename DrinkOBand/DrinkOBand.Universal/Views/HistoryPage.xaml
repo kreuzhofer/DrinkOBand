@@ -1,0 +1,128 @@
+﻿<common1:PageBase
+    x:Class="DrinkOBand.Views.HistoryPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DrinkOBand.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:common="using:DrinkOBand.Common"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    xmlns:charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    xmlns:common1="using:DrinkOBand.Universal.Common"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mvvm:ViewModelLocator.AutoWireViewModel="True"
+    >
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical">
+                <charting:Chart
+                x:Name="ThisWeekChart"
+                x:Uid="chartThisWeek"
+                Title="This week's daily amounts"
+                Margin="20,0"
+                Height="350"
+                FontSize="10"
+                >
+                    <charting:Chart.Series>
+                        <charting:ColumnSeries
+                        x:Uid="seriesAmount"
+                        Title="Amount"
+                        ItemsSource="{Binding ThisWeeksAmounts}"
+                        IndependentValueBinding="{Binding Name}"
+                        DependentValueBinding="{Binding Value}"
+                        IsSelectionEnabled="False"
+                         
+                        />
+                    </charting:Chart.Series>
+                    <charting:Chart.Palette>
+                        <charting:ResourceDictionaryCollection>
+                            <!-- Gold -->
+                            <ResourceDictionary>
+                                <SolidColorBrush
+                                x:Key="Background"
+                                Color="White" />
+                                <Style
+                                x:Key="DataPointStyle"
+                                TargetType="Control">
+                                    <Setter
+                                    Property="Background"
+                                    Value="{StaticResource Background}" />
+                                </Style>
+                                <Style
+                                x:Key="DataShapeStyle"
+                                TargetType="Shape">
+                                    <Setter
+                                    Property="Stroke"
+                                    Value="{StaticResource Background}" />
+                                    <Setter
+                                    Property="StrokeThickness"
+                                    Value="2" />
+                                    <Setter
+                                    Property="StrokeMiterLimit"
+                                    Value="1" />
+                                    <Setter
+                                    Property="Fill"
+                                    Value="{StaticResource Background}" />
+                                </Style>
+                            </ResourceDictionary>
+                        </charting:ResourceDictionaryCollection>
+                    </charting:Chart.Palette>
+                </charting:Chart>
+                <charting:Chart
+                x:Name="LastWeekChart"
+                x:Uid="chartLastWeek"
+                Title="Last week's daily amounts"
+                Margin="20,0" 
+                Height="350"
+                FontSize="10"
+                >
+                    <charting:Chart.Series>
+                        <charting:ColumnSeries
+                        x:Uid="seriesAmount"
+                        Title="Amount"
+                        ItemsSource="{Binding LastWeeksAmounts}"
+                        IndependentValueBinding="{Binding Name}"
+                        DependentValueBinding="{Binding Value}"
+                        IsSelectionEnabled="False"/>
+                    </charting:Chart.Series>
+                    <charting:Chart.Palette>
+                        <charting:ResourceDictionaryCollection>
+                            <!-- Gold -->
+                            <ResourceDictionary>
+                                <SolidColorBrush
+                                x:Key="Background"
+                                Color="White" />
+                                <Style
+                                x:Key="DataPointStyle"
+                                TargetType="Control">
+                                    <Setter
+                                    Property="Background"
+                                    Value="{StaticResource Background}" />
+                                </Style>
+                                <Style
+                                x:Key="DataShapeStyle"
+                                TargetType="Shape">
+                                    <Setter
+                                    Property="Stroke"
+                                    Value="{StaticResource Background}" />
+                                    <Setter
+                                    Property="StrokeThickness"
+                                    Value="2" />
+                                    <Setter
+                                    Property="StrokeMiterLimit"
+                                    Value="1" />
+                                    <Setter
+                                    Property="Fill"
+                                    Value="{StaticResource Background}" />
+                                </Style>
+                            </ResourceDictionary>
+                        </charting:ResourceDictionaryCollection>
+                    </charting:Chart.Palette>
+                </charting:Chart>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</common1:PageBase>
+

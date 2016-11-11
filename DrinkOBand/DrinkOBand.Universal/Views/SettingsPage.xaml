@@ -1,0 +1,105 @@
+﻿<common1:PageBase
+    x:Class="DrinkOBand.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DrinkOBand.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:common="using:DrinkOBand.Common"
+    xmlns:mvvm="using:Microsoft.Practices.Prism.Mvvm"
+    xmlns:converters="using:DrinkOBand.Common.Converters"
+    xmlns:common1="using:DrinkOBand.Universal.Common"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mvvm:ViewModelLocator.AutoWireViewModel="True"
+    >
+    
+    <common1:PageBase.Resources>
+        <ResourceDictionary>
+            <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        </ResourceDictionary>
+    </common1:PageBase.Resources>
+
+    <Grid Background="{StaticResource PopupBackgroundColor}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="QuietHours">
+                <VisualState x:Name="QuietHoursDisabled"/>
+                <VisualState x:Name="QuietHoursEnabled">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="QuietHoursStartTimePicker">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Visible</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="QuietHoursEndTimePicker">
+                            <DiscreteObjectKeyFrame KeyTime="0">
+                                <DiscreteObjectKeyFrame.Value>
+                                    <Visibility>Visible</Visibility>
+                                </DiscreteObjectKeyFrame.Value>
+                            </DiscreteObjectKeyFrame>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Interactivity:Interaction.Behaviors>
+            <Core:DataTriggerBehavior Binding="{Binding QuietHoursEnabled}" Value="True">
+                <Core:GoToStateAction StateName="QuietHoursEnabled"/>
+            </Core:DataTriggerBehavior>
+            <Core:DataTriggerBehavior Binding="{Binding QuietHoursEnabled}" Value="False">
+                <Core:GoToStateAction StateName="QuietHoursDisabled"/>
+            </Core:DataTriggerBehavior>
+        </Interactivity:Interaction.Behaviors>
+
+        <ScrollViewer>
+            <StackPanel Margin="20,10,20,10">
+                <TextBlock x:Name="textBlock" x:Uid="txtSettings" Margin="0" TextWrapping="Wrap" Text="Settings" d:LayoutOverrides="LeftPosition, RightPosition" Style="{StaticResource SubheaderTextBlockStyle}"/>
+
+                <TextBox x:Name="dailyGoalTextBox" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Stretch" Header="{Binding DailyWaterGoalHeader}" Text="{Binding DailyGoal, Mode=TwoWay}" InputScope="Number" />
+                <TextBlock x:Uid="hlpDailyGoalSetting" Margin="0,10,0,0" Text="The daily water goal is the amount of water that you are planning to drink every day using this app. You can stick to the default (100 oz) or you can change this to any other regular number of oz. Please make sure, you only enter a valid number in this field." TextWrapping="WrapWholeWords"/>
+
+                <ComboBox x:Name="comboBox" 
+                          x:Uid="txtNotificationInverval" 
+                          Header="Notification interval" 
+                          Margin="0,20,0,0" 
+					ItemsSource="{Binding Intervals}" 
+					SelectedItem="{Binding SelectedInterval, Mode=TwoWay}" 
+					DisplayMemberPath="Name"
+                      />
+                <TextBlock x:Uid="hlpNotificationIntervalSetting" Text="The notification interval is the smallest amount of time between notifications on your band or in the app to remind you of drinking water. If you set this to a higher value, you will get notified less often. Anyway, as soon as you select any amount inside of the mobile app, the notification interval is extended at least by this amount of time." TextWrapping="WrapWholeWords"/>
+                
+                <ComboBox x:Name="SelectUnitSystem"
+                          x:Uid="txtUnitSystem"
+                          Header="Unit System"
+                          Margin="0,20,0,0"
+                          ItemsSource="{Binding UnitSystems}"
+                          SelectedItem="{Binding SelectedUnitSystem, Mode=TwoWay}"
+                          DisplayMemberPath="Name"
+                          />
+                <TextBlock x:Uid="hlpUnitSystemSetting" 
+                           Text="The unit system can either be Metric, U.S. or Imperial." TextWrapping="WrapWholeWords"/>
+
+                <ToggleSwitch x:Uid="txtEnableQuietHours" Header="Enable quiet hours" IsOn="{Binding QuietHoursEnabled, Mode=TwoWay}" Margin="0,20,0,0"/>
+                <TimePicker x:Name="QuietHoursStartTimePicker" x:Uid="txtQuietHoursStart" Header="Quiet hours start" Time="{Binding QuietHoursStart, Mode=TwoWay}" Visibility="Collapsed"/>
+                <TimePicker x:Name="QuietHoursEndTimePicker" x:Uid="txtQuietHoursEnd" Header="Quiet hours end" Time="{Binding QuietHoursEnd, Mode=TwoWay}" Visibility="Collapsed"/>
+                <TextBlock x:Uid="hlpQuietHoursSetting" Text="If you enable quiet hours, you will not be notified to drink water between the start and end time you set." TextWrapping="WrapWholeWords"/>
+
+                <ToggleSwitch x:Name="toggleSwitch" Header="Cloud Sync" VerticalAlignment="Stretch" Margin="0,20,0,0" IsOn="{Binding EnableCloudBackup, Mode=TwoWay}" />
+                
+                <TextBlock x:Uid="hlpCloudBackupSetting" Text="If you switch on cloud sync, the next time you start the mobile app, it will ask you for your Microsoft account (live-Id). The data that is normally only collected in the local app storage is then backed up in Azure to prevent you from data loss and you will be able to uninstall/reinstall the app without losing your historical data." TextWrapping="WrapWholeWords"/>
+
+                <Border Height="1" BorderThickness="1" BorderBrush="White" Margin="0,20,0,20" Visibility="Collapsed"/>
+
+                <TextBlock Margin="0" TextWrapping="Wrap" Text="Testing" d:LayoutOverrides="LeftPosition, RightPosition" Style="{StaticResource BaseTextBlockStyle}" Visibility="Collapsed"/>
+                <Button Content="Test notification" Command="{Binding TestNotificationCommand}" Visibility="Collapsed"/>
+
+                <Button Content="Setup Band Connection" Command="{Binding SetupBandCommand}" Visibility="Collapsed"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+
+</common1:PageBase>
+

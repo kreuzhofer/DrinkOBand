@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnDrinkWater.Label" xml:space="preserve">
+    <value>Drink water</value>
+  </data>
+  <data name="btnRetry.Content" xml:space="preserve">
+    <value>Retry</value>
+  </data>
+  <data name="btnSkipBandSetup.Content" xml:space="preserve">
+    <value>Setup my band later</value>
+  </data>
+  <data name="chartLastWeek.Title" xml:space="preserve">
+    <value>Last week's daily amounts</value>
+  </data>
+  <data name="chartThisWeek.Title" xml:space="preserve">
+    <value>This week's daily amounts</value>
+  </data>
+  <data name="hlpCloudBackupSetting.Text" xml:space="preserve">
+    <value>If you switch on cloud sync, I will ask you for your Microsoft account (live-Id). The data that is normally only collected in the local app storage is then synced to our safe cloud service. This protects you from data loss and you will be able to uninstall/reinstall the app without losing your historical data.</value>
+  </data>
+  <data name="hlpDailyGoalSetting.Text" xml:space="preserve">
+    <value>The daily water goal is the amount of water in fl oz that you are planning to drink every day using this app. You can stick to the default (100 oz) or you can change this to any other regular number of oz. Please make sure, you only enter a valid number in this field.</value>
+  </data>
+  <data name="hlpNotificationIntervalSetting.Text" xml:space="preserve">
+    <value>The notification interval is the smallest amount of time between notifications on your band or in the app to remind you of drinking water. If you set this to a higher value, you will get notified less often. Anyway, as soon as you select any amount inside of the mobile app, the notification interval is extended at least by this amount of time.</value>
+  </data>
+  <data name="hlpQuietHoursSetting.Text" xml:space="preserve">
+    <value>If you enable the quiet hours rule, you will not be notified to drink water between the start and end time you set.</value>
+  </data>
+  <data name="msgAverage" xml:space="preserve">
+    <value>Average {0} {1}</value>
+  </data>
+  <data name="msgBandAllSet" xml:space="preserve">
+    <value>All set :) let's continue!</value>
+  </data>
+  <data name="msgHowMuchWater" xml:space="preserve">
+    <value>How much water?</value>
+  </data>
+  <data name="msgLastWeek" xml:space="preserve">
+    <value>Last week</value>
+  </data>
+  <data name="msgMax" xml:space="preserve">
+    <value>Max {0} {1}</value>
+  </data>
+  <data name="msgThisWeek" xml:space="preserve">
+    <value>This week</value>
+  </data>
+  <data name="msgTimeToDrink" xml:space="preserve">
+    <value>Time to drink water!</value>
+  </data>
+  <data name="msgTodaysProgress" xml:space="preserve">
+    <value>Today's progress</value>
+  </data>
+  <data name="remind120Min" xml:space="preserve">
+    <value>Every 2 hours</value>
+  </data>
+  <data name="remind15Min" xml:space="preserve">
+    <value>Every 15 Minutes</value>
+  </data>
+  <data name="remind30Min" xml:space="preserve">
+    <value>Every 30 Minutes</value>
+  </data>
+  <data name="remind45Min" xml:space="preserve">
+    <value>Every 45 Minutes</value>
+  </data>
+  <data name="remind60Min" xml:space="preserve">
+    <value>Every 60 minutes</value>
+  </data>
+  <data name="toastServiceAuthenticationFailed" xml:space="preserve">
+    <value>Authentication with the Drink O'Band Cloud-Service was not successful. Cloud-Backup has been disabled. You can enable it any time in the settings menu.</value>
+  </data>
+  <data name="txtAchievedToday" xml:space="preserve">
+    <value>Achieved {0} {1}</value>
+  </data>
+  <data name="txtConnectingToBand.Text" xml:space="preserve">
+    <value>Connecting to your Microsoft Band...</value>
+  </data>
+  <data name="txtDailyGoal" xml:space="preserve">
+    <value>Goal {0} {1}</value>
+  </data>
+  <data name="txtDailyWaterGoal" xml:space="preserve">
+    <value>Daily water drinking goal ({0})</value>
+  </data>
+  <data name="txtDrinkOBandStarting.Text" xml:space="preserve">
+    <value>Drink O'Band is starting...</value>
+  </data>
+  <data name="txtEnableQuietHours.Header" xml:space="preserve">
+    <value>Quiet hours rule</value>
+  </data>
+  <data name="msgErrorWhileConnectingToBand" xml:space="preserve">
+    <value>Error while connecting to your Microsoft Band. Please make sure, your Band is connected via Bluetooth and try again.</value>
+  </data>
+  <data name="txtNotificationInverval.Header" xml:space="preserve">
+    <value>Notification interval</value>
+  </data>
+  <data name="txtQuietHoursEnd.Header" xml:space="preserve">
+    <value>Quiet hours end</value>
+  </data>
+  <data name="txtQuietHoursStart.Header" xml:space="preserve">
+    <value>Quiet hours start</value>
+  </data>
+  <data name="txtSettings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="txtTodaysProgress.Text" xml:space="preserve">
+    <value>Today's progress</value>
+  </data>
+  <data name="btnHistory.Text" xml:space="preserve">
+    <value>History / Statistics</value>
+  </data>
+  <data name="btnHome.Text" xml:space="preserve">
+    <value>Daily progress</value>
+  </data>
+  <data name="btnSettings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="seriesAmount.Title" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="btnDataExport.Text" xml:space="preserve">
+    <value>Data export</value>
+  </data>
+  <data name="btnGetPro.Text" xml:space="preserve">
+    <value>Get pro version</value>
+  </data>
+  <data name="msgProVersionPurchaseAborted" xml:space="preserve">
+    <value>The purchase process was aborted.</value>
+  </data>
+  <data name="msgProVersionPurchasedSuccessfully" xml:space="preserve">
+    <value>Thank you for purchasing the pro version of Drink O'Band. Now you have all the cool features like exporting data, cloud sync and you are supporting me further developing and extending this app :-)</value>
+  </data>
+  <data name="msgProVersionPurchaseFailed" xml:space="preserve">
+    <value>Sorry, the purchase process failed. Please try again later.</value>
+  </data>
+  <data name="msgSharingExportFailed" xml:space="preserve">
+    <value>Error while sharing the export data.</value>
+  </data>
+  <data name="btnBuyPro.Content" xml:space="preserve">
+    <value>Buy Pro version now</value>
+  </data>
+  <data name="txtExtendedFeatures.Text" xml:space="preserve">
+    <value>Extended features:</value>
+  </data>
+  <data name="txtFeature1.Text" xml:space="preserve">
+    <value>- Data export to csv-format (can be opened with Excel)</value>
+  </data>
+  <data name="txtFeature2.Text" xml:space="preserve">
+    <value>- Data sync with multiple devices and backup of your data in the cloud</value>
+  </data>
+  <data name="txtGetPro.Text" xml:space="preserve">
+    <value>Get Pro!</value>
+  </data>
+  <data name="txtProAdvantages.Text" xml:space="preserve">
+    <value>Drink O'Band Pro features</value>
+  </data>
+  <data name="btnSetupBand.Text" xml:space="preserve">
+    <value>Setup Microsoft Band</value>
+  </data>
+  <data name="msgNoFreeTileSlotOnBand" xml:space="preserve">
+    <value>We tried to add a tile to the band but there is no free tile slot available. Please use the Microsoft Health App first to remove on of the other tiles on your band to create a free slot for the Drink O'Band tile and then try again.</value>
+  </data>
+  <data name="msgNoPairedBandFound" xml:space="preserve">
+    <value>Sorry, but I did not find any Microsoft Band paired to this device. Please pair your Microsoft Band with the Health App first and then try again.</value>
+  </data>
+  <data name="amount1Metric" xml:space="preserve">
+    <value>150 ml (one small cup)</value>
+  </data>
+  <data name="amount1US" xml:space="preserve">
+    <value>4 fl oz (Small Cup)</value>
+  </data>
+  <data name="amount2Metric" xml:space="preserve">
+    <value>300 ml (one glass/can)</value>
+  </data>
+  <data name="amount2US" xml:space="preserve">
+    <value>10 fl oz (Glass/Can)</value>
+  </data>
+  <data name="amount3Metric" xml:space="preserve">
+    <value>500 ml (small bottle)</value>
+  </data>
+  <data name="amount3US" xml:space="preserve">
+    <value>16 fl oz (Bottle)</value>
+  </data>
+  <data name="amount4Metric" xml:space="preserve">
+    <value>750 ml (normal bottle)</value>
+  </data>
+  <data name="amount4US" xml:space="preserve">
+    <value>25 fl oz (larger Bottle)</value>
+  </data>
+  <data name="amount5Metric" xml:space="preserve">
+    <value>1 Liter (big bottle)</value>
+  </data>
+  <data name="amount5US" xml:space="preserve">
+    <value>32 fl oz (quart)</value>
+  </data>
+  <data name="amount6Metric" xml:space="preserve">
+    <value>1,5 Liter (XXL bottle)</value>
+  </data>
+  <data name="amount6US" xml:space="preserve">
+    <value>64 fl oz (half gallon)</value>
+  </data>
+  <data name="amountCustom" xml:space="preserve">
+    <value>Other amount...</value>
+  </data>
+  <data name="hlpUnitSystemSetting.Text" xml:space="preserve">
+    <value>The unit system can either be Metric or U.S./Imperial.</value>
+  </data>
+  <data name="txtUnitSystem.Header" xml:space="preserve">
+    <value>Unit system</value>
+  </data>
+  <data name="unitMetric" xml:space="preserve">
+    <value>Metric (ml)</value>
+  </data>
+  <data name="unitUSImperial" xml:space="preserve">
+    <value>U.S./Imperial (fl oz)</value>
+  </data>
+  <data name="unitTextMetric" xml:space="preserve">
+    <value>ml</value>
+  </data>
+  <data name="unitTextUS" xml:space="preserve">
+    <value>oz</value>
+  </data>
+  <data name="btnContinue.Content" xml:space="preserve">
+    <value>Continue</value>
+  </data>
+  <data name="selImperial.Content" xml:space="preserve">
+    <value>U.S./Imperial (fl oz)</value>
+  </data>
+  <data name="selMetric.Content" xml:space="preserve">
+    <value>Metric (ml)</value>
+  </data>
+  <data name="txtSelectUnitSystem.Text" xml:space="preserve">
+    <value>First, lets start with your desired unit system. Which one do you like to choose?</value>
+  </data>
+  <data name="txtFeature3.Text" xml:space="preserve">
+    <value>- No ads anymore</value>
+  </data>
+  <data name="msgAddingTileDenied" xml:space="preserve">
+    <value>Unfortunately you did not confirm adding the Drink O'Band Tile to your Band. So I cannot show you notifications on your Band. You may retry now or setup your band connection later as you wish.</value>
+  </data>
+  <data name="msgBandAccessDenied" xml:space="preserve">
+    <value>You did not grant me access to your band :-( So I cannot send notifications to your Band. To enable this app again to access your Band you have to go to your phone's settings into the "Privacy" menu and then to "Other Devices". There you need to enable the access to your Band again for "Drink O'Band"</value>
+  </data>
+  <data name="flyoutCustomAmount.Text" xml:space="preserve">
+    <value>Enter custom amount</value>
+  </data>
+  <data name="btnCancel.Content" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="btnSave.Content" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="CustomAmountTextBox.Header" xml:space="preserve">
+    <value>Enter custom amount</value>
+  </data>
+  <data name="CustomAmountTextBox.PlaceholderText" xml:space="preserve">
+    <value>Enter amount here</value>
+  </data>
+  <data name="msgError" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="msgInvalidAmount" xml:space="preserve">
+    <value>Invalid Amount</value>
+  </data>
+  <data name="btnDrinkNow" xml:space="preserve">
+    <value>Drink now!</value>
+  </data>
+  <data name="txtSelectAmountToAdd" xml:space="preserve">
+    <value>Select amount</value>
+  </data>
+  <data name="msgRepeatBandSetupNeccessary" xml:space="preserve">
+    <value>Because of a recent update, we have to re-install the Drink O'Band app tile on your Microsoft Band. You will be asked to confirm adding the tile again.</value>
+  </data>
+  <data name="msgPleaseRunTheAppForUpdate" xml:space="preserve">
+    <value>Please start the app. There is an update.</value>
+  </data>
+  <data name="storeAppDescription" xml:space="preserve">
+    <value>Reminds you to drink water regularly</value>
+  </data>
+  <data name="storeAppName" xml:space="preserve">
+    <value>Drink Reminder</value>
+  </data>
+</root>
